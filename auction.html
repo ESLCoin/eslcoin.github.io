@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>ESL Coin Tron | ESL Coin TRX | Auction</title>
+        <title>ESL Coin Tron | ESL Coin TRX | Get Auction</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/img/ESL%20Coin%20Icon%20100x100.png" />
         <!-- Font Awesome icons (free version)-->
@@ -27,11 +27,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#background">Background</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#roadmap">Roadmap</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Applications</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#roadmap">Roadmap</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#portfolio">Applications</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#involve">Get Involved</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="involve.html">Get Involved</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="involve.html#governance">Governance</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="auction.html">Auction</a></li> 
                     </ul>
                 </div>
@@ -43,10 +43,43 @@
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Auction</h1>
                 <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Starting in:</p>
+                <br>
+                <p id="demo" class="masthead-heading text-uppercase mb-0"></p>
+                <script>
+                    // Set the date we're counting down to
+                    var countDownDate = new Date("Nov 20, 2020 16:00:00").getTime();
+                    
+                    // Update the count down every 1 second
+                    var x = setInterval(function() {
+                    
+                      // Get today's date and time
+                      var now = new Date().getTime();
+                        
+                      // Find the distance between now and the count down date
+                      var distance = countDownDate - now;
+                        
+                      // Time calculations for days, hours, minutes and seconds
+                      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                        
+                      // Output the result in an element with id="demo"
+                      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                      + minutes + "m " + seconds + "s ";
+                        
+                      // If the count down is over, write some text 
+                      if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("demo").innerHTML = "LAUNCHED!";
+                      }
+                    }, 1000);
+                    </script>
             </div>
         </header>
-        <!-- Background Section-->
-        <section class="page-section mb-0" id="background">
+        <!-- Technical Launch Info Section-->
+        <section class="page-section mb-0" id="tl-info">
             <div class="container">
                 <h2 class="page-section-heading text-center text-uppercase text-secondary">Technical Launch</h2>
                 <div class="divider-custom">
@@ -54,23 +87,39 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <p>The purpose of a technical launch is to raise awareness of the ESLCoin TRX token within the technical community, create a development fund for the Tron division of the team and build up a liquidity fund for the future exchange implementation. The technical launch will be conducted through an initial auction series with a daily emission stating at 1 Million token a day and reducing every day. Unlike Initial Coin Offerings, the intended audience are technical investors/participants and developers who do believe in creating an ecosystem to disrupt the 80 Billion dollars language learning space. As a result, no UI is created for the technical launch and anyone wanting to participate must interact directly with the smart contract. To reward token particpants during this stage, 95% of the daily auction is shared among token stakers.
-                    More information on how to interact with the smart contract can be found at our smart contract tutorial page.
-                    Technical participants can elect to be part of the charter members program and receive a share of day 1 and 2 auction revenue see charter members program.
-                    Non technical partipants can partake in this project throguh other means. See our get invovled page for more information.</p>
-                <h3 class="page-section-heading text-center text-uppercase text-secondary">Background</h3>
-                <p>English has been the effective lingua franca since the ascendance of the British Empire in the 19th century. It is still used as a common global language to this day, and proficiency is especially prized in countries competing to export to the massive combined economy of the United States, Canada, Australia, Great Britain and Ireland. This has created a global industry worth billions of dollars; in rich manufacturing centers such as South Korea, there are even celebrity ESL tutors making seven figures! Students from all over the world learn English from native English teachers—often traveling to dedicated schools overseas—forming a robust community with its own Meetups and conferences. Our team includes highly qualified ESL professionals with years of experience in the industry, and we are partnered with established ESL organizations. This includes one of the largest related Meetups and Facebook pages in the world, whose growing online community created the need for our upcoming blockchain-powered ESL app.</p>
-                <p><img class="img-fluid" src="assets/img/ESL%20industry.png" alt="" /> </p>
-                <h3 class="page-section-heading text-center text-uppercase text-secondary">Challenge</h3>
-                <p>While we take English for granted, there are billions who are eager to learn the English language but are prevented from doing so due to many existing barriers in the current English learning system from cost barriers to inefficient distribution systems and poor proficiency testing systems. The limitations in the current system has resulted in varying education levels across the board often only the wealthy could afford quality education and are often charged astronomical rates for language schools. The inefficiencies and lack of transparency in the education delivery & grading system has resulted in many exploits where profiteering schools & exam providers are known to ‘sell language proficiency levels’ to language learners based on their ability to pay and not their accomplishments in learning.</p>
-                <p>Globalization and the rise of technology have allowed many to have access to the internet. One of our goals is to make English learning accessible from anywhere in the world regardless of social economic background. We seek to create a blockchain system that removes inefficiencies and provide the benefits of blockchain to the language learning space. As long as you have a phone and internet connection, you can be connected to a global network of native speakers who can help you learn and become more fluent at communicating in English.</p>
+                <div class="container"></div>
+                    <p>The goal of the technical launch is to raise awareness of the ESL Coin TRX token within the technical community, create a development fund for the Tron division team and build up a liquidity fund for the public launch of the token on major exchanges. The technical launch will be conducted through an initial auction series with a daily emission stating at 1 Million token a day and reducing every day. Unlike Initial Coin Offerings, the intended audience are technical investors/participants and developers who do believe in creating an ecosystem to disrupt the 80 Billion dollars language learning space. As a result, no UI is created for the technical launch and anyone wanting to participate must interact directly with the smart contract. To reward token particpants during this stage, 95% of the daily auction is shared among token stakers.</p>
+                    <p>Technical participants can elect to be part of the <a href="involve.html#charter">charter members program</a> and receive a share of day 1 and 2 auction revenue see <a href="involve.html#charter">charter members program</a>.</p>
+                    <p>Non technical partipants can partake in this project through other means. See our <a href="involve.html">get invovled page</a> for more information.</p>
+                    <p>During phase 3 (CODENAME Graduation), ESL Coin TRX will be released to the public through a combination of an in house exchange and public crypto exchanges. A portion of the developer pool will be allocated to providing liquidity on exchanges.</p>
+                    <br>
+                </div>
+                <!-- Tutorial Buttons-->
+                <div class="container">
+                    <h3>Smart Contract Tutorial Outline</h3>
+                </div>
+                <div class="text-center mb-4">
+                    <br>
+                    <a class="btn btn-xl btn-outline-secondary" href="#tutorial-entering">
+                        Entering the Auction
+                    </a>
+                    <a class="btn btn-xl btn-outline-secondary" href="#tutorial-collecting">
+                        Collecting from the Auction
+                    </a>
+                    <a class="btn btn-xl btn-outline-secondary" href="#tutorial-staking">
+                        Staring a Stake
+                    </a>
+                    <a class="btn btn-xl btn-outline-secondary" href="#tutorial-endstake">
+                        Collecting a Stake
+                    </a>
+                </div>                
             </div>
         </section>
         <!-- Smart Contract Section-->
-        <section class="page-section bg-primary text-white mb-0" id="smartcontract">
+        <section class="page-section bg-primary text-white mb-0" id="tutorial">
             <div class="container">
                 <!-- Smart Contract Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">Smart Contract </h2>
+                <h2 class="page-section-heading text-center text-uppercase text-white">Smart Contract Tutorial</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -78,46 +127,50 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Smart Contract Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ml-auto"><p><h3>Technical Launch</h3></p><p class="lead">ESL Coin TRX will launch to the technical community through a daily auction. Token holders can acquire tokens through the auction and can stake ESL Coin TRX with the contract for daily dividends.</p></div>
-                    <div class="col-lg-4 mr-auto"><p><h3>Ecosystem Development</h3></p><p class="lead">The development team will use the proceeds of the daily auction to support an ecosystem of dApps on the ESL Coin TRX network. </p></div>
-                    <div class="col-lg-4 ml-auto"><p><h3>Public Launch</h3></p><p class="lead">ESL Coin TRX will be released to the public for purchase at this stage through public exchanges and an internal exchange on the ESL Coin website. </p></div>
+                <div class="container" id="tutorial-entering">
+                    <h3>Entering the Auction</h3>
+                    <p>Start by opening the contract interaction page and making sure your wallet is connected then follow the below instructions (Join the telegram for more assistance) The auction resets every day at 00:00 UTC. You may collect as soon as the auction ends.</p>
+                    <p>If you would like a referral wallet to use so you gain extra tokens at the end of the auction, consider using Crypto Cloud TV's to support a smaller Youtuber: </p>
+                    <p><img class="img-fluid" src="assets/img/contract/1-lobby.jpg" alt="" /> </p>
+                    <p>Finding current day and total TRX pool (from all users) in the auction for the day, please note due to the calculations used, the total auction amount will show 1 million times the actual amount.</p>
+                    <p><img class="img-fluid" src="assets/img/contract/2-call.jpg" alt="" /> </p>
                 </div>
-                <!-- Smart Contract Section Button-->
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="assets/whitepaper.pdf">
-                        <i class="fas fa-download mr-2"></i>
-                        See White Paper!
-                    </a>
+                <div class="container" id="tutorial-collecting">
+                    <h3>Collecting from the Auction</h3>
+                    <p>Collecting from the auction is a matter of going to the WRITE CONTRACT tab on the contract, go to command 10.xfLobbyExit and typing in the day you want to collect from.</p>
+                    <p><img class="img-fluid" src="assets/img/contract/3-collecting_auction.jpg" alt="" /> </p>
+                </div>
+                <div class="container" id="tutorial-staking">
+                    <h3>Staking ESL Coin TRX</h3>
+                    <p>A stake can be started on the WRITE CONTRACT tab. </p>
+                    <p>Go to command 5.stakeStart</p>
+                    <p>Enter in amount of stakes desired followed by 8 zeroes (00000000). For example:</p>
+                    <ul>
+                        <li>10000 ESL = 1000000000000</li>
+                        <li>9001 ESL = 900100000000</li>
+                        <li>1337 ESL = 133700000000</li>
+                        <li>314 ESL = 31400000000</li>
+                    </ul>
+                    <p><img class="img-fluid" src="assets/img/contract/4-staking.jpg" alt="" /> </p>
+                </div>
+                <div class="container" id="tutorial-endstake">
+                    <h3>Colleting Ended Stakes</h3>
+                    <p>Grabbing your ended stakes is slightly more complicated. Just make sure your stake has completed fully.</p>
+                    <ol>
+                        <li>Start by opening the contract interaction page and making sure your wallet is connected</li>
+                        <li>Go to READ Contract and go to command 6.stakeCount and enter your wallet address</li>
+                        <li>Write down output. This is the number of active stakes you have +1</li>
+                        <li>Go to 3.stakeLists (Still at READ CONTRACT Tab) and type in stake number 0, this is stake #1 active for you</li>
+                        <li>copy output to a note pad</li>
+                        <li>repeat step 4 & 5 with your other stake numbers up to the # of total stakes you have -1 provided in step 3</li>
+                        <li>Refer to image below to determine which stakes are unlocked</li>
+                        <li>Go to WRITE CONTRACT and put in the stake information without commas (refer to imagae below)</li>
+                    </ol>
+                    <p><img class="img-fluid" src="assets/img/contract/5-collect_stake.jpg" alt="" /> </p>
                 </div>
             </div>
         </section>
-        <!-- About Section-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
-                    <div class="col-lg-4 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                </div>
-                <!-- About Section Button-->
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
-                        <i class="fas fa-download mr-2"></i>
-                        Get Started with Auction!
-                    </a>
-                </div>
-            </div>
-        </section>
+
         <!-- Get Involved Section-->
         <section class="page-section" id="involve">
             <div class="container">
@@ -137,10 +190,21 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
                 <div class="row">
+                    <!-- Footer Email-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Contact Us</h4>
+                        <p class="lead mb-0">
+                            Email: <a href="mailto:eslcoin@protonmail.com">eslcoin@protonmail.com</a>
+                        </p>
+                    </br>
+                    <img class="masthead-avatar mb-5" src="assets/img/eslcointrxheadermini2.png" alt="ESLCoinLogo" />
+                    </div>                    
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
@@ -151,7 +215,7 @@
                     <div class="col-lg-4">
                         <h4 class="text-uppercase mb-4">About ESL Coin TRX</h4>
                         <p class="lead mb-0">
-                            About ESL Coin TRX is the Tron Based implementation of the <a href="http://eslcoin.org">ESL Coin project</A>. 
+                            About ESL Coin TRX is the Tron Based fork implementation of the <a href="http://eslcoin.org">ESL Coin project</A>. 
                         </p>
                     </div>
                 </div>
