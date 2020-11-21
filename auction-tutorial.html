@@ -89,7 +89,7 @@
                 </div>
                 <div class="container"></div>
                     <h3>Technical Launch</h3>
-                    <p>The goal of the technical launch is to raise awareness of the ESL Coin TRX token within the technical community, create a development fund and build up a liquidity fund for the public launch of the token on major exchanges. The technical launch will be conducted through an initial auction series with a daily emission stating at 250k token a day and reducing every day. Unlike Initial Coin Offerings, the intended audience are technical investors/participants and developers who do believe in creating an ecosystem to disrupt the 80 Billion dollars language learning space. During the technical launch and anyone wanting to participate must interact directly with a proto UI or the smart contract. To reward token particpants during this stage, 95% of the daily auction is shared among token stakers.</p>
+                    <p>The goal of the technical launch is to raise awareness of the ESL Coin TRX token within the technical community, create a development fund for the Tron division team and build up a liquidity fund for the public launch of the token on major exchanges. The technical launch will be conducted through an initial auction series with a daily emission stating at 250k token a day and reducing every day. Unlike Initial Coin Offerings, the intended audience are technical investors/participants and developers who do believe in creating an ecosystem to disrupt the 80 Billion dollars language learning space. During the technical launch and anyone wanting to participate must interact directly with the smart contract and upon public launch a seperate dedicated UI will be created for interaction with the contract. To reward token particpants during this stage, 95% of the daily auction is shared among token stakers.</p>
                     <p>Technical participants can elect to be part of the <a href="involve.html#charter">charter members program</a> and receive a share of day 1 and 2 auction revenue see <a href="involve.html#charter">charter members program</a>.</p>
                     <p>Non technical partipants can partake in this project through other means. See our <a href="involve.html">get invovled page</a> for more information.</p>
                     <h3>Public Launch</h3>    
@@ -97,29 +97,104 @@
                     <p>The auction will continue on through a dedicated auction page & UI. The daily emission significantly reduced. </p>
                     <p><img class="img-fluid" src="assets/img/portfolio/eslcointrx-mockup.png" alt="" /> </p>
                     <br>
-                </div>            
+                </div>
+                <!-- Tutorial Buttons-->
+                <div class="container">
+                    <h3>Smart Contract Tutorial Outline</h3>
+                </div>
+                <div class="text-center mb-4">
+                    <br>
+                    <a class="btn btn-xl btn-outline-secondary" href="#tutorial-entering">
+                        Entering the Auction
+                    </a>
+                    <a class="btn btn-xl btn-outline-secondary" href="#tutorial-collecting">
+                        Collecting from the Auction
+                    </a>
+                    <a class="btn btn-xl btn-outline-secondary" href="#tutorial-staking">
+                        Staring a Stake
+                    </a>
+                    <a class="btn btn-xl btn-outline-secondary" href="#tutorial-endstake">
+                        Collecting a Stake
+                    </a>
+                </div>                
+            </div>
+        </section>
+        <!-- Smart Contract Section-->
+        <section class="page-section bg-primary text-white mb-0" id="tutorial">
+            <div class="container">
+                <!-- Smart Contract Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Smart Contract Tutorial</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Smart Contract Section Content-->
+                <div class="container" id="tutorial-entering">
+                    <h3>Entering the Auction</h3>
+                    <p>Start by opening the contract interaction page and making sure your wallet is connected then follow the below instructions (Join the telegram for more assistance) The auction resets every day at 00:00 UTC. You may collect as soon as the auction ends.</p>
+                    <p>If you would like a referral wallet to use so you gain extra tokens at the end of the auction, consider using Crypto Cloud TV's to support a smaller Youtuber: </p>
+                    <p><img class="img-fluid" src="assets/img/contract/1-lobby.jpg" alt="" /> </p>
+                    <p>Finding current day and total TRX pool (from all users) in the auction for the day, please note due to the calculations used, the total auction amount will show 1 million times the actual amount.</p>
+                    <p><img class="img-fluid" src="assets/img/contract/2-call.jpg" alt="" /> </p>
+                </div>
+                <div class="container" id="tutorial-collecting">
+                    <h3>Collecting from the Auction</h3>
+                    <p>Collecting from the auction is a matter of going to the WRITE CONTRACT tab on the contract, go to command 10.xfLobbyExit and typing in the day you want to collect from.</p>
+                    <p><img class="img-fluid" src="assets/img/contract/3-collecting_auction.jpg" alt="" /> </p>
+                </div>
+                <div class="container" id="tutorial-staking">
+                    <h3>Staking ESL Coin TRX</h3>
+                    <p>A stake can be started on the WRITE CONTRACT tab. </p>
+                    <p>Go to command 5.stakeStart</p>
+                    <p>Enter in amount of stakes desired followed by 8 zeroes (00000000). For example:</p>
+                    <ul>
+                        <li>10000 ESL = 1000000000000</li>
+                        <li>9001 ESL = 900100000000</li>
+                        <li>1337 ESL = 133700000000</li>
+                        <li>314 ESL = 31400000000</li>
+                    </ul>
+                    <p><img class="img-fluid" src="assets/img/contract/4-staking.jpg" alt="" /> </p>
+                </div>
+                <div class="container" id="tutorial-endstake">
+                    <h3>Colleting Ended Stakes</h3>
+                    <p>Grabbing your ended stakes is slightly more complicated. Just make sure your stake has completed fully.</p>
+                    <ol>
+                        <li>Start by opening the contract interaction page and making sure your wallet is connected</li>
+                        <li>Go to READ Contract and go to command 6.stakeCount and enter your wallet address</li>
+                        <li>Write down output. This is the number of active stakes you have +1</li>
+                        <li>Go to 3.stakeLists (Still at READ CONTRACT Tab) and type in stake number 0, this is stake #1 active for you</li>
+                        <li>copy output to a note pad</li>
+                        <li>repeat step 4 & 5 with your other stake numbers up to the # of total stakes you have -1 provided in step 3</li>
+                        <li>Refer to image below to determine which stakes are unlocked</li>
+                        <li>Go to WRITE CONTRACT and put in the stake information without commas (refer to imagae below)</li>
+                    </ol>
+                    <p><img class="img-fluid" src="assets/img/contract/5-collect_stake.jpg" alt="" /> </p>
+                </div>
             </div>
         </section>
 
         <!-- Get Involved Section-->
-        <section class="page-section bg-primary text-white mb-0" id="involve">
+        <section class="page-section" id="involve">
             <div class="container">
                 <!-- Get Involved Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">What To Expect</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Get Involved</h2>
                 <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
+                <div class="divider-custom">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>               
                 <!-- Involve Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto"><p><h3>Low Token count</h3></p><p class="lead">Our Daily Auctions will start from 250k ESL tokens per day and will be distributed between the users that participated in Auction based on their purchase amount. This will reduce over the next 365 days.</p></div>
-                    <div class="col-lg-4 mr-auto"><p><h3>Daily Tron Dividends</h3></p><p class="lead">Everyday 95% of the previous day's TRX that was spent in the Auction Lobby will be pooled and allocated to users based upon their completed stake terms.</p></div>
-                    <div class="col-lg-4 ml-auto"><p><h3>Lucrative Staking</h3></p><p class="lead">Stake your ESL tokens within the Smart Contract and earn daily interest. Additionally, Stakers are rewarded TRX tokens from the daily Lobbies based off the percentage of total tokens being Staked.</p></div>
+                    <div class="col-lg-4 ml-auto"><p><h3>Spread the Word</h3></p><p class="lead">Tell your friends and others about ESL Coin TRX! Let's build up a community of crypto enthusiasts who would like to school the unschooled population.</p></div>
+                    <div class="col-lg-4 mr-auto"><p><h3>Build dApps on the Ecosystem</h3></p><p class="lead">Are you a developer? We invite you to build dApps for the ESLCoin TRX that are focused on disrupting the language learning ecosystem. </p></div>
+                    <div class="col-lg-4 ml-auto"><p><h3>Participate</h3></p><p class="lead">Be part of history in the making by getting your hands on some ESL Coin TRX. Stake them and test out the apps for bounties and rewareds.  </p></div>
                 </div>
             </div>
         </section>
+
 
         <!-- Footer-->
         <footer class="footer text-center">
@@ -137,6 +212,7 @@
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="http://twitter.com/eslcointrx"><i class="fab fa-fw fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="http://t.me/eslcointrx"><i class="fab fa-fw fa-telegram"></i></a>
                     </div>
                     <!-- Footer About Text-->
